@@ -13,21 +13,20 @@
         <h2>Comparação A B</h2>
         <form id="form-numero">
 
-            <label for="forA"> CampoA: </label>
-            <input type="number"  name="forA"  id= "forA" required placeholder="Campo Numérico" />
+            <label for="idA"> CampoA: </label>
+            <input type="number"  name="idA"  id= "idA" required placeholder="Campo Numérico" />
             <p class="error-menseger">
                 Deve escrever só numero por favor!
             </p>
-            <label for="forB"> CampoB: </label>
-            <input type="number" name="forB" id="forB" required placeholder="Campo Numérico"/>
+            <label for="idB"> CampoB: </label>
+            <input type="number" name="idB" id="idB" required placeholder="Campo Numérico"/>
             <p class="error-menseger">
                 Deve escrever só numero por favor!
             </p>
-            <button>Submit</button>
+            <button id="submit">Submit</button> 
+            <input type="button" onclick="limpar('idA','idB')" value="Limpar os valores">
             </form>   
-        <p class="mensagem-suesso">
-            Dados Válidos <b>CampoB</b> é maior que <b>campoA</b>
-        </p>
+        <p class="mensagem-suesso"> Dados Válidos Campo A é menor que campo B </p>
         <p class="error-menseger2">Dados invalidos por favor revisar</p>
     </div>
 <script src="./main1.js"></script>
