@@ -1,28 +1,42 @@
 const form=document.getElementById('form-numero');
-let campA=parseInt(document.getElementById('forA').value);
-let campB=parseInt(document.getElementById('forB').value);
+let variavelA = document.getElementById("idA").value;
+let variavelB = document.getElementById("idB").value;
 let formvalid=false;
 
 
-function numeroValido(campA,campB){
-    return campB>campA;
+function numeroValido(variavelA,variavelB){
+    return variavelB > variavelA;
+}
+
+function limpar(variavelA, variavelB ){
+    document.getElementById(variavelA).value="";
+    document.getElementById(variavelB).value="";
 }
 
 form.addEventListener('submit',function(e){
     e.preventDefault();
-    const mensageSucesso = 'formulario enviado! verificado: <b>campo A</b> es menor que <b>campo B</b>';
-    const mensageError= document.querySelector('.error-menseger2')
-    formvalid=numeroValido(forA,forB);
+    const variavelSucesso = document.querySelector(".mensagem-suesso");
+    const variavelErro = document.querySelector(".error-menseger2");
+    
+    formvalid = numeroValido(parseInt(variavelA.value), parseInt(variavelB.value));
+    
     if(formvalid){
-        const chamdamensagensucess=document.querySelector('.mensagem-suesso');
-        chamdamensagensucess.innerHTML= mensagesucesso;
-        chamdamensagensucess.getElementsByClassName.display='block';
+        variavelSucesso.style.display = "block";
+        variavelErro.style.display = "none";
 
-        campA.value ='';
-        campB.value ='';
+        variavelA.value="";
+        variavelB.value="";
 
     }else{
-        document.querySelector('error-menseger2');
+        
+        variavelSucesso.style.display = "none";
+        variavelErro.style.display = "block";
+
+        variavelA.value="";
+        variavelB.value="";
+
+    
+
     }
 });
 
