@@ -1,19 +1,19 @@
-const form=document.getElementById('form-numero');
-let variavelA = document.getElementById("idA").value;
-let variavelB = document.getElementById("idB").value;
+const form=document.getElementById("form-numero");
+let variavelA = document.getElementById("idA");
+let variavelB = document.getElementById("idB");
 let formvalid=false;
 
 
 function numeroValido(variavelA,variavelB){
-    return variavelB > variavelA;
+    return variavelA < variavelB;
 }
 
 function limpar(variavelA, variavelB ){
-    document.getElementById(variavelA).value="";
-    document.getElementById(variavelB).value="";
+    variavelA.value="";
+    variavelB.value="";
 }
 
-form.addEventListener('submit',function(e){
+form.addEventListener("submit",function(e){
     e.preventDefault();
     const variavelSucesso = document.querySelector(".mensagem-suesso");
     const variavelErro = document.querySelector(".error-menseger2");
